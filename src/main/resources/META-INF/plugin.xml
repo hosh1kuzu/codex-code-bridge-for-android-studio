@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>io.github.hosh1kuzu.codexlink</id>
+    <name>Codex Code Bridge</name>
+    <vendor url="https://github.com/hosh1kuzu">hosh1kuzu</vendor>
+
+    <description><![CDATA[
+    Adds a Codex copy-link action to Android Studio's floating code toolbar.
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action
+            id="io.github.hosh1kuzu.codexlink.CopyCodexLinkAction"
+            class="io.github.hosh1kuzu.codexlink.CopyCodexLinkAction"
+            text="Copy Codex Link"
+            description="Copy a Codex markdown link for the current selection">
+            <add-to-group group-id="Floating.CodeToolbar" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
