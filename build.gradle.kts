@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.hosh1kuzu"
-version = "0.3.1"
+version = "0.3.2"
 
 repositories {
     mavenCentral()
@@ -39,7 +39,6 @@ intellijPlatform {
 
         ideaVersion {
             sinceBuild = "242"
-            untilBuild = "242.*"
         }
     }
 }

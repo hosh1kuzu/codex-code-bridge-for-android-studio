@@ -23,7 +23,8 @@
 ## 适用版本
 
 - Android Studio Ladybug `2024.2.1 Patch 2`
-- IntelliJ Platform `242.*`
+- Android Studio Meerkat Feature Drop `2024.3.2 Patch 1`
+- IntelliJ Platform `242+`
 
 ## 安装方式
 
@@ -35,7 +36,7 @@
 4. 选择 `Install Plugin from Disk...`
 5. 选择仓库中的安装包：
 
-`build/distributions/codex-code-bridge-for-android-studio-0.3.1.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.3.2.zip`
 
 也可以直接从 GitHub Release 页面下载：
 
@@ -86,12 +87,12 @@ GRADLE_USER_HOME=/tmp/codex-gradle-home \
 
 打包后的产物位于：
 
-`build/distributions/codex-code-bridge-for-android-studio-0.3.1.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.3.2.zip`
 
 ## 当前版本
 
 - 插件名称：`Codex Code Bridge for Android Studio`
-- 当前版本：`0.3.1`
+- 当前版本：`0.3.2`
 - 插件 ID：`io.github.hosh1kuzu.codexlink`
 - License：`MIT`
 
@@ -101,3 +102,4 @@ GRADLE_USER_HOME=/tmp/codex-gradle-home \
 - 没有选区时，悬浮工具栏按钮不会显示
 - 当前版本不附带选中文本内容，只复制代码位置链接
 - 当前版本不支持列号、多选区合并、或自动发送到 Codex
+- 已移除 `untilBuild` 上限，尽量减少后续 Android Studio 版本升级时的安装阻塞
