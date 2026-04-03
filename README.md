@@ -1,6 +1,6 @@
-# Codex Code Bridge
+# Codex Code Bridge for Android Studio
 
-`Codex Code Bridge` 是一个 Android Studio 插件，用来把当前选中代码的位置快速复制成适合粘贴到 Codex 对话框里的 Markdown 文件链接。
+`Codex Code Bridge for Android Studio` 是一个 Android Studio 插件，用来把当前选中代码的位置快速复制成适合粘贴到 Codex 对话框里的 Markdown 文件链接。
 
 选中编辑器中的一段代码后，原生选区悬浮工具栏里会出现 Codex 图标。点击后，插件会把类似下面这种格式复制到剪贴板：
 
@@ -33,7 +33,7 @@
 4. 选择 `Install Plugin from Disk...`
 5. 选择仓库中的安装包：
 
-`build/distributions/codex-code-bridge-0.3.0.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.3.1.zip`
 
 6. 安装完成后重启 Android Studio
 
@@ -80,12 +80,12 @@ GRADLE_USER_HOME=/tmp/codex-gradle-home \
 
 打包后的产物位于：
 
-`build/distributions/codex-code-bridge-0.3.0.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.3.1.zip`
 
 ## 当前版本
 
-- 插件名称：`Codex Code Bridge`
-- 当前版本：`0.3.0`
+- 插件名称：`Codex Code Bridge for Android Studio`
+- 当前版本：`0.3.1`
 - 插件 ID：`io.github.hosh1kuzu.codexlink`
 
 ## 注意事项

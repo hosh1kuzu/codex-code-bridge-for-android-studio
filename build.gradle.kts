@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.hosh1kuzu"
-version = "0.3.0"
+version = "0.3.1"
 
 repositories {
     mavenCentral()
@@ -31,7 +31,7 @@ kotlin {
 
 intellijPlatform {
     pluginConfiguration {
-        name = "Codex Code Bridge"
+        name = "Codex Code Bridge for Android Studio"
         version = project.version.toString()
         description = """
             Adds a Codex copy-link action to Android Studio's floating code toolbar.

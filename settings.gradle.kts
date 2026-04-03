@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "codex-code-bridge"
+rootProject.name = "codex-code-bridge-for-android-studio"
