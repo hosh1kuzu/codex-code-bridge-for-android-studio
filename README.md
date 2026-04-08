@@ -7,7 +7,7 @@
 选中编辑器中的一段代码后，原生选区悬浮工具栏里会出现 Codex 图标。点击后，插件会把类似下面这种格式复制到剪贴板：
 
 ```md
-[Example.kt:L120-L168](/absolute/path/to/Example.kt#L120)
+[Example.kt:L120C20-L168C80](/absolute/path/to/Example.kt#L120C20)
 ```
 
 这样就可以直接粘贴到 Codex，对某一段代码做分析、审查或讨论。
@@ -36,7 +36,7 @@
 4. 选择 `Install Plugin from Disk...`
 5. 选择仓库中的安装包：
 
-`build/distributions/codex-code-bridge-for-android-studio-0.3.3.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.4.0.zip`
 
 也可以直接从 GitHub Release 页面下载：
 
@@ -58,8 +58,8 @@
 
 插件当前复制的格式如下：
 
-- 单行选区：`[Foo.kt:L120](/abs/path/Foo.kt#L120)`
-- 多行选区：`[Foo.kt:L120-L168](/abs/path/Foo.kt#L120)`
+- 单点选区：`[Foo.kt:L120C20](/abs/path/Foo.kt#L120C20)`
+- 范围选区：`[Foo.kt:L100C20-L200C80](/abs/path/Foo.kt#L100C20)`
 
 说明：
 
@@ -87,12 +87,12 @@ GRADLE_USER_HOME=/tmp/codex-gradle-home \
 
 打包后的产物位于：
 
-`build/distributions/codex-code-bridge-for-android-studio-0.3.3.zip`
+`build/distributions/codex-code-bridge-for-android-studio-0.4.0.zip`
 
 ## 当前版本
 
 - 插件名称：`Codex Code Bridge for Android Studio`
-- 当前版本：`0.3.3`
+- 当前版本：`0.4.0`
 - 插件 ID：`io.github.hosh1kuzu.codexlink`
 - License：`MIT`
 
@@ -101,5 +101,6 @@ GRADLE_USER_HOME=/tmp/codex-gradle-home \
 - 仅对本地文件系统中的真实源码文件生效
 - 没有选区时，悬浮工具栏按钮不会显示
 - 当前版本不附带选中文本内容，只复制代码位置链接
-- 当前版本不支持列号、多选区合并、或自动发送到 Codex
+- 当前版本支持行号与列号，但点击链接后的定位主要依赖起始位置
+- 当前版本不支持多选区合并、或自动发送到 Codex
 - 已显式取消 `untilBuild` 限制，避免构建工具自动写回 `242.*` 并阻塞后续 Android Studio 版本安装

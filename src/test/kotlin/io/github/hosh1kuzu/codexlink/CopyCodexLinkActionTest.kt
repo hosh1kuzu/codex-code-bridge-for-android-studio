@@ -56,7 +56,25 @@ class CopyCodexLinkActionTest : BasePlatformTestCase() {
         val clipboardText = CopyPasteManager.getInstance().contents
             ?.getTransferData(DataFlavor.stringFlavor) as? String
 
-        assertEquals("[Example.kt:L1-L2](${file.path}#L1)", clipboardText)
+        assertEquals("[Example.kt:L1C1-L2C12](${file.path}#L1C1)", clipboardText)
+    }
+
+    fun `test action copies line and column information for mid-line selections`() {
+        val file = myFixture.tempDirFixture.createFile("src/Example.kt", "first line\nsecond line\nthird line\n")
+        myFixture.openFileInEditor(file)
+        val editor = myFixture.editor
+        editor.selectionModel.setSelection(
+            editor.document.getLineStartOffset(0) + 2,
+            editor.document.getLineStartOffset(1) + 6,
+        )
+
+        val event = createEvent(editor, file)
+        action.actionPerformed(event)
+
+        val clipboardText = CopyPasteManager.getInstance().contents
+            ?.getTransferData(DataFlavor.stringFlavor) as? String
+
+        assertEquals("[Example.kt:L1C3-L2C6](${file.path}#L1C3)", clipboardText)
     }
 
     private fun createEvent(editor: Editor, file: VirtualFile): AnActionEvent {
