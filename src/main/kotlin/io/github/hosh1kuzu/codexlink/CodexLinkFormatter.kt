@@ -25,6 +25,6 @@ object CodexLinkFormatter {
             "$fileName:L${startLine}C$startColumn-L${endLine}C$endColumn"
         }
 
-        return "[$label]($absolutePath#L${startLine}C$startColumn)"
+        return "[$label]($absolutePath#L${startLine}C${startColumn - 1})"
     }
 }

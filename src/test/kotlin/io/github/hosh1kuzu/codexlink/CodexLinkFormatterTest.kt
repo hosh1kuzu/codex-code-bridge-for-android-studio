@@ -15,7 +15,7 @@ class CodexLinkFormatterTest {
             endColumn = 20,
         )
 
-        assertEquals("[Example.kt:L120C20](/tmp/project/Example.kt#L120C20)", formatted)
+        assertEquals("[Example.kt:L120C20](/tmp/project/Example.kt#L120C19)", formatted)
     }
 
     @Test
@@ -29,7 +29,7 @@ class CodexLinkFormatterTest {
             endColumn = 80,
         )
 
-        assertEquals("[Example.kt:L120C20-L168C80](/tmp/project/Example.kt#L120C20)", formatted)
+        assertEquals("[Example.kt:L120C20-L168C80](/tmp/project/Example.kt#L120C19)", formatted)
     }
 
     @Test
@@ -43,7 +43,7 @@ class CodexLinkFormatterTest {
             endColumn = 18,
         )
 
-        assertEquals("[示例 文件.kt:L10C3-L12C18](/tmp/示例 工程/示例 文件.kt#L10C3)", formatted)
+        assertEquals("[示例 文件.kt:L10C3-L12C18](/tmp/示例 工程/示例 文件.kt#L10C2)", formatted)
     }
 
     @Test
@@ -57,6 +57,6 @@ class CodexLinkFormatterTest {
             endColumn = 48,
         )
 
-        assertEquals("[Example.kt:L100C20-L100C48](/tmp/project/Example.kt#L100C20)", formatted)
+        assertEquals("[Example.kt:L100C20-L100C48](/tmp/project/Example.kt#L100C19)", formatted)
     }
 }

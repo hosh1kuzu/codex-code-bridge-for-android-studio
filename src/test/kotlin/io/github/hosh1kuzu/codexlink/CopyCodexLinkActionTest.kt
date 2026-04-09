@@ -56,7 +56,7 @@ class CopyCodexLinkActionTest : BasePlatformTestCase() {
         val clipboardText = CopyPasteManager.getInstance().contents
             ?.getTransferData(DataFlavor.stringFlavor) as? String
 
-        assertEquals("[Example.kt:L1C1-L2C12](${file.path}#L1C1)", clipboardText)
+        assertEquals("[Example.kt:L1C1-L2C12](${file.path}#L1C0)", clipboardText)
     }
 
     fun `test action copies line and column information for mid-line selections`() {
@@ -74,7 +74,7 @@ class CopyCodexLinkActionTest : BasePlatformTestCase() {
         val clipboardText = CopyPasteManager.getInstance().contents
             ?.getTransferData(DataFlavor.stringFlavor) as? String
 
-        assertEquals("[Example.kt:L1C3-L2C6](${file.path}#L1C3)", clipboardText)
+        assertEquals("[Example.kt:L1C3-L2C6](${file.path}#L1C2)", clipboardText)
     }
 
     private fun createEvent(editor: Editor, file: VirtualFile): AnActionEvent {
